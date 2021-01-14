@@ -1,6 +1,6 @@
 Using Live Reload in Go
-#go
-Amit Kumar
+
+
 When we're developing APIs in Go or any other language it's important to have tools that help us to automate certain tasks like Live Reload, I'd had been using realize to doing it, but it seems to have some issues when working with Go modules, I tried some different solutions and they didn't work for me 😭.
 Luckily I found a very handy package that can helps us to achieve this task adn it's called modd, let's give it a try and see how it works:
 
