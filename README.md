@@ -5,9 +5,9 @@ When we're developing APIs in Go or any other language it's important to have to
 Luckily I found a very handy package that can helps us to achieve this task adn it's called modd, let's give it a try and see how it works:
 
 Create the basic project structure
-$ mkdir live-reload && cd live-reload && mkdir cmd
+`$ mkdir live-reload && cd live-reload && mkdir cmd
 $ go mod init
-$ touch cmd/main.go
+$ touch cmd/main.go`
 Open main.go file and type the following
 package main
 
