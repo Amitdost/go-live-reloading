@@ -11,7 +11,7 @@ $ touch cmd/main.go`
 Open main.go file and type the following
 package main
 
-import (
+`import (
     "fmt"
     "log"
     "net/http"
@@ -38,12 +38,15 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 
 func contactHandler(w http.ResponseWriter, r *http.Request) {
     w.Write([]byte("Hello from contact handler"))
-}
+}`
 
 Installing modd package
-$ brew install modd
+
+`$ brew install modd`
+
 Create modd config file
-# run _only_ changed tests
+
+`# run _only_ changed tests
 **/*.go {
     prep: go test @dirmods
 }
@@ -54,18 +57,24 @@ Create modd config file
     prep: go build -o live-reload ./cmd
     daemon +sigterm: ./live-reload
 }
+`
 
 Then execute modd command inside root project:
-$ modd
+
+`$ modd`
+
 You should see something like this in your terminal:
 
 modd running
 
 Go to your main.go file and update homeHandler
+
 //... other code
-func homeHandler(w http.ResponseWriter, r *http.Request) {
+
+`func homeHandler(w http.ResponseWriter, r *http.Request) {
     w.Write([]byte("Hello from home handler changed and live reload 😎"))
-}
+}`
+
 //... rest of the code
 After that modd is going to re-compile your server and now you can visit http://localhost:4000 and see the updated version, your terminal should look like so:
 
